@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #2a9d8f;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px #aaa;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: #264653;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #2a9d8f;
+            color: #fff;
+            text-transform: uppercase;
+        }
+
+        td {
+            font-size: 18px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        img {
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .highlight {
+            color: #e76f51;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+            <h1>Student Details</h1>
+        </center>
+        <table>
+            <tr>
+                <td><h2><b>First Name</b></h2></td><td>:</td><td class="highlight"><h2>Surya Pavan</h2></td>
+                <td rowspan="5" class="center"><img src="pavan.jpg" width="170" height="170"></td>
+            </tr>
+            <tr>
+                <td><h2><b>Last Name</b></h2></td><td>:</td><td><h2 class="highlight">Salagrama</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Roll Number</b></h2></td><td>:</td><td><h2 class="highlight">23A31A4259</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Department</b></h2></td><td>:</td><td><h2 class="highlight">CSE (AI & ML)</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>CGPA</b></h2></td><td>:</td><td><h2 class="highlight">9.9</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Skills</b></h2></td><td>:</td><td><h2>C, Java, Python, Data Structures, HTML</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>E-Mail</b></h2></td><td>:</td><td><h2>pavan4259@gmail.com</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Mobile Number</b></h2></td><td>:</td><td><h2>9298858491</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Location</b></h2></td><td>:</td><td><h2>Kakinada</h2></td>
+            </tr>
+            <tr>
+                <td><h2><b>Graduating Year</b></h2></td><td>:</td><td><h2>2025</h2></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th>S.NO</th>
+                <th>Company</th>
+                <th>Role</th>
+                <th>Selected Or Not</th>
+                <th>Interview Date</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Flipkart</td>
+                <td>Software Developer</td>
+                <td class="highlight">Selected</td>
+                <td>4-1-25</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Accenture</td>
+                <td>Software Designer</td>
+                <td>Not Selected</td>
+                <td>----</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Amazon</td>
+                <td>Software Developer</td>
+                <td class="highlight">Selected</td>
+                <td>18-1-25</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Infosys</td>
+                <td>Employee</td>
+                <td>Not Selected</td>
+                <td>----</td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Offer Table</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, #f4f4f9, #d7e9f7);
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #0073e6;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px #aaa;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 15px;
+        }
+
+        th {
+            background-color: #0073e6;
+            color: white;
+            text-transform: uppercase;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .offer-letter-section, .feedback-section {
+            width: 90%;
+            margin: 20px auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .offer-letter-section h1, .feedback-section h2 {
+            color: #0073e6;
+        }
+
+        .offer-letter-section img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            display: block;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            animation: zoomIn 1.5s ease-in-out;
+        }
+
+        .offer-letter-section a {
+            display: block;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #0073e6;
+            text-decoration: none;
+            margin-top: 10px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .offer-letter-section a:hover {
+            text-decoration: underline;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #0073e6;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background-color: #005bb5;
+        }
+
+        .thank-you-message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes zoomIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1><b>Offer Table</b></h1>
+    <table>
+        <tr>
+            <th>S.No</th>
+            <th>Company Name</th>
+            <th>Offer Status</th>
+            <th>Role</th>
+            <th>Date Of Joining</th>
+            <th>Salary Per Annum</th>
+            <th>Location</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Amazon</td>
+            <td>Accepted</td>
+            <td>Data Analyst</td>
+            <td>2nd March</td>
+            <td>25 lakhs</td>
+            <td>Hyderabad</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Accenture</td>
+            <td>Declined</td>
+            <td>Tester</td>
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Infosys</td>
+            <td>Declined</td>
+            <td>Tester</td>
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Flipkart</td>
+            <td>Pending</td>
+            <td>Data Analyst</td>
+            <td>----</td>
+            <td>----</td>
+            <td>----</td>
+        </tr>
+    </table>
+
+    <div class="offer-letter-section">
+        <h1><b>Amazon Offer Letter</b></h1>
+        <img src="https://i.pinimg.com/originals/01/ca/da/01cada77a0a7d326d85b7969fe26a728.jpg" alt="Amazon Offer Letter">
+        <a href="file:///C:/Users/Geetha%20Kola/Documents/amazon%20resume.pdf">Click to view your offer letter</a>
+    </div>
+
+    <div class="feedback-section">
+        <h2><b>Feedback</b></h2>
+        <form id="feedbackForm" onsubmit="handleSubmit(event)">
+            <textarea name="feedback" id="feedbackText" rows="5" placeholder="Write your feedback here..."></textarea>
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <p class="thank-you-message" id="thankYouMessage">Thank you for your feedback!</p>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const feedbackText = document.getElementById('feedbackText').value.trim();
+
+            if (feedbackText) {
+                const thankYouMessage = document.getElementById('thankYouMessage');
+                thankYouMessage.style.display = 'block';
+                document.getElementById('feedbackText').value = '';
+            } else {
+                alert('Please write some feedback before submitting.');
+            }
+        }
+    </script>
+
+</body>
+</html>

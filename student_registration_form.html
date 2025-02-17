@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #74b9ff, #6c5ce7);
+            color: white;
+        }
+
+        .form-container {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 15px;
+            font-size: 1rem;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background: #00cec9;
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: #0984e3;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Student Registration Form</h1>
+        <form id="registrationForm">
+            <table>
+                <tr>
+                    <td><b>First Name:</b></td>
+                    <td><input type="text" name="fname" required></td>
+                </tr>
+                <tr>
+                    <td><b>Last Name:</b></td>
+                    <td><input type="text" name="lname" required></td>
+                </tr>
+                <tr>
+                    <td><b>Registered Number:</b></td>
+                    <td><input type="text" name="rnumber" required></td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <script>
+        // Add event listener to the form
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission behavior
+            window.location.href = 'main.html'; // Redirect to the dashboard
+        });
+    </script>
+</body>
+</html>
